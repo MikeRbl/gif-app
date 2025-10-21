@@ -1,0 +1,26 @@
+<div id="profile" class="px-6 py-10">
+  <p class="text-slate-500">Welcome back,</p>
+  <a href="#" class="inline-flex space-x-2 items-center">
+    <span>
+      <img
+        class="rounded-full w-8 h-8"
+        [src]="userAvatar"
+        alt="User Avatar"
+      />
+    </span>
+    <span class="text-sm md:text-base font-bold"> {{ userName }} </span>
+  </a>
+</div>
+
+<nav id="nav" class="w-full px-2">
+  <ul class="space-y-2">
+    <li *ngFor="let option of menuOptions">
+      <app-gifs-side-menu-option
+        [title]="option.title"
+        [subtitle]="option.subtitle"
+        [icon]="option.icon"
+        [router]="option.router">
+      </app-gifs-side-menu-option>
+    </li>
+  </ul>
+</nav>
